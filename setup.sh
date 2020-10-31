@@ -99,6 +99,7 @@ if [[ "${DOCKER}" == "YES" ]]; then
   # this will install docker.io as a dependency
   sudo apt install -y docker-compose
   sudo usermod -aG docker $USER
+  sudo chmod 666 /var/run/docker.sock
 else
   echo "skipping Docker (https://www.docker.com/) installation"
 fi
