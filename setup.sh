@@ -2,6 +2,7 @@
 
 NODEJS_VERSION=12
 SLACK_VERSION=4.4.2
+INSTALL_GIT=YES
 INSTALL_WINE=YES
 INSTALL_SKYPE=YES
 TERRAFORM_VERSION=0.12.26
@@ -85,12 +86,16 @@ sudo snap install webstorm --classic
 
 # ###################################################################
 # Git (cli)
-sudo apt-get install git
+if [[ "${INSTALL_GIT}" == "YES" ]]; then
+  sudo apt-get install git
+fi
 
 # ###################################################################
 # Smartgit
-curl -fsSL https://www.syntevo.com/downloads/smartgit/smartgit-20_1_1.deb > /tmp/smartgit.deb
-sudo dpkg -i /tmp/smartgit.deb
+if [[ "${INSTALL_GIT}" == "YES" ]]; then
+  curl -fsSL https://www.syntevo.com/downloads/smartgit/smartgit-20_1_1.deb > /tmp/smartgit.deb
+  sudo dpkg -i /tmp/smartgit.deb
+fi
 
 # ###################################################################
 # Postman
