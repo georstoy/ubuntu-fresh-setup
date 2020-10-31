@@ -39,7 +39,8 @@ sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent sof
 sudo apt install -y \
 	gparted vim mc synaptic iputils-ping \
 	inetutils-traceroute dconf-editor net-tools findutils \
-	lynx alacarte htop
+	lynx alacarte htop \
+	build-essential file
 
 # ###################################################################
 # Wine
@@ -55,6 +56,14 @@ sudo apt-get install -y nodejs
 # ###################################################################
 # npm (cli)
 sudo apt install npm
+
+# ###################################################################
+# Homebrew (cli)
+sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -r ~/.bash_profile && echo eval" ($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+echo "eval $($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
 # ###################################################################
 # docker (this will install docker.io as a dependancy)
