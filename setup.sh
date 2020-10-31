@@ -80,6 +80,10 @@ sudo apt update
 sudo apt install -y sublime-text
 
 # ###################################################################
+# WebStorm
+sudo snap install webstorm --classic
+
+# ###################################################################
 # Git (cli)
 sudo apt-get install git
 
