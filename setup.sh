@@ -67,6 +67,10 @@ sudo apt update
 sudo apt install -y sublime-text
 
 # ###################################################################
+# Git (cli)
+sudo apt-get install git
+
+# ###################################################################
 # Smartgit
 curl -fsSL https://www.syntevo.com/downloads/smartgit/smartgit-20_1_1.deb > /tmp/smartgit.deb
 sudo dpkg -i /tmp/smartgit.deb
