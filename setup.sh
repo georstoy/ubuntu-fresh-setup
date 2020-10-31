@@ -32,7 +32,7 @@ dpkg-reconfigure tzdata
 
 # ###################################################################
 # Required by some packages and package management itself
-sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common 
+sudo apt-get install -y apt-transport-https ca-certificates curl wget gnupg-agent software-properties-common
 
 # ###################################################################
 # Various tools/utils 
@@ -91,6 +91,11 @@ sudo dpkg -i /tmp/smartgit.deb
 # ###################################################################
 # Postman
 sudo snap install postman
+
+# ###################################################################
+# Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
 
 # ###################################################################
 # Slack
