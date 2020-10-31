@@ -53,6 +53,10 @@ curl -sL https://deb.nodesource.com/setup_${NODEJS_VERSION}.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # ###################################################################
+# npm (cli)
+sudo apt install npm
+
+# ###################################################################
 # docker (this will install docker.io as a dependancy)
 # As of Ubuntu 20.04 docker.io package is more up to date
 sudo apt install -y docker-compose
